@@ -9,3 +9,11 @@ function send404(response) {
   response.write('Error 404: Could not find what you were looking for.');
   response.end();
 }
+
+function sendFile(response, filePath, fileContents) {
+  response.writeHead(
+    200,
+    { "Content-Type" : mime.lookup(path.basename(filePath)) }
+    );
+  response.end(fileContents);
+}
