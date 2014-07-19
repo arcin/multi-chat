@@ -1,4 +1,5 @@
 var http = require('http'),
     fs = require('fs'),
     path = require('path'),
-    mime = require('mime');
+    mime = require('mime'),
+    cache = {};
